@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "X to FixUp",
   "version": "1.0",
-  "description": "Replace X links with Fixup links instead.",
+  "description": "Replace X/Twitter links with FixupX links instead.",
   "permissions": ["clipboardWrite"],
   "content_scripts": [
     {
@@ -15,5 +15,9 @@
   ],
   "icons": {
     "96": "icons/icon-96.png"
+  },
+  "data_collection_permissions": {
+    "data_categories": [],
+    "data_types": []
   }
 }
