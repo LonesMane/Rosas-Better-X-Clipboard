@@ -1,28 +1,3 @@
-//--- Detects if the user copied the link via 'Ctrl + C' ---//
-document.addEventListener('copy', (event) => {
-    // Collects the copied link
-    const copiedLink = window.getSelection().toString();
-
-    // Verifies link
-    const linkRegex = /^https:\/\/(x|twitter)\.com\//;
-
-    // Not an X|Twitter link
-    if (!linkRegex.test(copiedLink)) return;
-
-    // An X|Twitter link
-    const newLink = copiedLink.replace(
-        linkRegex,
-        'https://fixupx.com/'
-    );
-
-    // Prevents default copy
-    event.preventDefault();
-
-    // Inserts into clipboard
-    event.clipboardData.setData('text/plain', newLink);
-});
-
-
 //--- Detects if the user copied the link via Button ---//
 document.addEventListener(
     'click',

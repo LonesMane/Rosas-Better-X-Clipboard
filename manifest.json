@@ -1,14 +1,16 @@
 {
-    "manifest_version": 2,
-    "name": "X to FixUp",
-    "version": 1.0,
-    "description": "Replace X links with Fixup links instead.",
-    "permissions": ["clipboardWrite"],
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content.js"]
-        }
-    ]
-
+  "manifest_version": 2,
+  "name": "X to FixUp",
+  "version": "1.0",
+  "description": "Replace X links with Fixup links instead.",
+  "permissions": ["clipboardWrite"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.x.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
 }
